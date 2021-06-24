@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #95919A;
+}
+
+.right {
+  right: 0;
+  background-color: black;
+  font-family : bold;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+ 
+     <h2>checkbox☑</h2>
+     <p>plase checkbox the months for you goals or challenges </p>
+	 <from>
+	<input type="checkbox" name="January "/>January
+	<input type="checkbox" name="February "/>February
+	<input type="checkbox" name="March"/>March 
+	<input type="checkbox" name="April "/>April 
+	<input type="checkbox" name="May "/>May 
+	<input type="checkbox" name="June "/>June  
+	<input type="checkbox" name="July "/>July 
+	<input type="checkbox" name="August "/>August 
+	<input type="checkbox" name="September"/>September
+	<input type="checkbox" name="October"/>October 
+	<input type="checkbox" name="November"/>November 
+    <input type="checkbox" name="December"/>December 
+	  </from>
+	    <a href="about us.html">About us</a>
+  <a href="contact-us.html">contact us</a>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="C:\Users\Mohammed\OneDrive\Desktop/Watch.gif">
+    <h2>Day counter</h2>
+	<p id="demo"></p>
+	<p> write your golas or challenges down </p>
+	<input type="text"/>
+<script>
+var d = new Date()
+var countDownDate = new Date("jun 24, 2022 24:00:").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
+document.getElementById("demo").innerHTML = days + "Days " + hours + "Hours "
++ minutes + "minutes "+ seconds + "seconds";  
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+  </div>
+</div>
+</body>
+</html> 
